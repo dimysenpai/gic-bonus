@@ -1,31 +1,98 @@
 .topbar {
-  padding: 0px calc(100vw - 95%);
-  background: red;
+  // background: red;
 
   .top {
-    background: blue;
+    background: $primary;
+    color: $white;
+    padding: 7px calc(100vw - 95%);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .logotext {
-      font-weight: 800;
+      font-weight: 300;
       font-size: 35px;
+      width: 230px;
+    }
+
+    .search-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 73%;
+        height: 32px;
+        padding: 10px;
+      }
     }
 
     .actions {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 15px;
+
+      .notification {
+        position: relative;
+
+        div {
+          @extend %notif;
+        }
+      }
+
+      .panier {
+        position: relative;
+
+        div {
+          @extend %notif;
+        }
+      }
 
       .profil-container {
+        background: #7c7c7c;
+        padding: 5px 8px;
         display: flex;
-        align-items: center;
+        justify-content: space-evenly;
+        gap: 8px;
 
         .icon-profil {
-          width: 35px;
+          width: 25px;
+          height: 25px;
           border-radius: 50%;
         }
+
+        .icon-chevron-down {
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    background: red;
+    display: flex;
+    padding: 7px calc(100vw - 95%);
+    justify-content: space-between;
+
+    .links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cta-log {
+      display: flex;
+      gap: 15px;
+
+      .signin {
+        @extend %cta-btn;
+      }
+
+      .login {
+        @extend %cta-btn;
       }
     }
   }

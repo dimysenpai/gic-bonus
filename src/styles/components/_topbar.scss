@@ -4,7 +4,7 @@
   .top {
     background: $primary;
     color: $white;
-    padding: 7px calc(100vw - 95%);
+    @extend %container;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@
   .bottom {
     background: red;
     display: flex;
-    padding: 7px calc(100vw - 95%);
+    @extend %container;
     justify-content: space-between;
 
     .links {

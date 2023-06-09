@@ -1,0 +1,21 @@
+.breadcrumb {
+  @extend %container;
+
+  .not_current {
+    a {
+      color: #000;
+      transition: all 0.3s;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .current {
+    a {
+      color: #000;
+    }
+  }
+}

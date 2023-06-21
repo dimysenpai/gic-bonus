@@ -1,6 +1,6 @@
 import React from "react";
 
-const BreadCrumb = () => {
+const Breadcrumb = () => {
   return (
     <div className="breadcrumb">
       <span className="not_current">
@@ -11,4 +11,4 @@ const BreadCrumb = () => {
   );
 };
 
-export default BreadCrumb;
+export default Breadcrumb;

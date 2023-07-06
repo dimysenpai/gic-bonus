@@ -1,6 +1,6 @@
 import React from "react";
 
-const Breadcrumb = () => {
+const BreadCrumb = () => {
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
@@ -20,4 +20,4 @@ const Breadcrumb = () => {
   );
 };
 
-export default Breadcrumb;
+export default BreadCrumb;

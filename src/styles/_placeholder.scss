@@ -3,7 +3,7 @@
 }
 
 %notif {
-  background: red;
+  background: var(--danger);
   width: 15px;
   height: 15px;
   position: absolute;
@@ -16,33 +16,59 @@
   border-radius: 50%;
 }
 
-%cta-btn {
-  padding: 7px 10px;
+%input {
+  width: 97%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: inset 0px 0px 2px 0px var(--neutral-dark-60);
+  border: 1px solid var(--neutral-dark-60);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &::placeholder {
+    color: var(--neutral-dark-90);
+  }
+
+  &:focus {
+    border: 1px solid var(--primary);
+  }
 }
 
 %btn {
-  padding: 7px 15px;
-  background: transparent;
-  border: 2px solid #099dc4;
-  color: #ffffff;
-  border-radius: 50px;
-  font-size: 12pt;
-  transition: all 0.4s;
-  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  border: none;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: var(--neutral-light-20);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: 0px 0px 5px 0px var(--neutral-dark-80);
   cursor: pointer;
+  transition: all 0.3s;
 
   &:hover {
-    background-color: $secondary;
+    background: var(--primary-hover);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
 %a {
   text-decoration: none;
-  color: $white;
+  color: var(--neutral-light-20);
   transition: all 0.4s;
 
   &:hover {
-    color: $secondary;
+    color: var(--neutral-dark-100);
   }
 }
 
@@ -54,14 +80,14 @@
 
   h1 {
     position: relative;
-    color: $primary;
+    color: var(--primary);
 
     &::before {
       position: absolute;
       content: "";
       width: 40px;
       height: 5px;
-      background-color: $secondary;
+      background-color: var(--neutral-dark-100);
       bottom: 0px;
     }
   }

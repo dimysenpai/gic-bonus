@@ -1,2 +1,27 @@
 .breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: var(--neutral-light-50);
+  border-radius: 5px;
+
+  .breadcrumb-item {
+    display: inline-block;
+    margin-right: 5px;
+
+    a {
+      color: var(--neutral-dark-70);
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--primary);
+    }
+
+    &.active {
+      color: var(--primary);
+      font-weight: bold;
+    }
+  }
 }

@@ -1,15 +1,27 @@
 import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
+import Sort from "../components/Sort";
+import Card from "../components/card";
 
 const Store = () => {
   return (
     <div className="store">
-      <Breadcrumb />
-      <h1>Nos Articles</h1>
-      <div className="sort">Trié par : Ordinateur</div>
-      <h2>Tous</h2>
+      <Sort />
       <section className="cards_store">
-        <div className="card"></div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </section>
     </div>
   );

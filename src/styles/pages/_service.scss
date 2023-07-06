@@ -1,0 +1,9 @@
+.service {
+  @extend %container;
+
+  .content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

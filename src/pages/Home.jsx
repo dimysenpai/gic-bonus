@@ -1,105 +1,89 @@
 import React from "react";
 import HeroTop from "../components/HeroTop";
+import Card from "../components/card";
+import TrainingCard from "../components/TrainingCard";
+import Space from "../components/Space";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroTop />
-      <section className="section">
-        <h1>Articles de la boutique</h1>
-        <div className="cards">
-          <div className="card">
-            <span className="card-price">10 000 F</span>
-            <span className="card-tittle">Code du bg</span>
+      <div className="home">
+        <section className="section">
+          <h1>Articles de la boutique</h1>
+          <div className="cards">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
-          <div className="card">
-            <span className="card-price">10 000 F</span>
-            <span className="card-tittle">Code du bg</span>
-          </div>
-          <div className="card">
-            <span className="card-price">10 000 F</span>
-            <span className="card-tittle">Code du bg</span>
-          </div>
-        </div>
-      </section>
+          <Space />
+        </section>
 
-      <section className="section">
-        <h1>Listes des Services</h1>
-        <div className="services">
-          <div className="service">
-            <div className="ico">
-              <i className="fa fa-user"></i>
-            </div>
-            <h1>Infographie</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div className="service">
-            <div className="ico">
-              <i className="fa fa-user"></i>
-            </div>
-            <h1>Infographie</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div className="service">
-            <div className="ico">
-              <i className="fa fa-user"></i>
-            </div>
-            <h1>Infographie</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div className="service">
-            <div className="ico">
-              <i className="fa fa-user"></i>
-            </div>
-            <h1>Infographie</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <h1>Formations</h1>
-        <div className="formations">
-          <div className="formation">
-            <div className="img"></div>
-            <div className="details">
-              <h2>Infographie</h2>
+        <section className="section section-blue">
+          <h1>Listes des Services</h1>
+          <div className="services">
+            <div className="service">
+              <div className="ico">
+                <i className="fa fa-user"></i>
+              </div>
+              <h1>Infographie</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium similique ipsa, sapiente placeat cum eos!
+                Voluptatem deleniti molestias vero sunt sequi doloribus.
+                Expedita culpa nesciunt iste dolorem voluptatibus at ad numquam?
+                Minima reiciendis deleniti rerum doloremque repellat.
               </p>
-              <button>details</button>
             </div>
-          </div>
-          <div className="formation">
-            <div className="img"></div>
-            <div className="details">
-              <h2>Infographie</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium similique ipsa, sapiente placeat cum eos!
-              </p>
-              <button>details</button>
+            {/* <div className="service">
+              <div className="ico">
+                <i className="fa fa-user"></i>
+              </div>
+              <h1>Infographie</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
             </div>
-          </div>
-          <div className="formation">
-            <div className="img"></div>
-            <div className="details">
-              <h2>Infographie</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium similique ipsa, sapiente placeat cum eos!
-              </p>
-              <button>details</button>
+            <div className="service">
+              <div className="ico">
+                <i className="fa fa-user"></i>
+              </div>
+              <h1>Infographie</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
             </div>
+            <div className="service">
+              <div className="ico">
+                <i className="fa fa-user"></i>
+              </div>
+              <h1>Infographie</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div className="service">
+              <div className="ico">
+                <i className="fa fa-user"></i>
+              </div>
+              <h1>Infographie</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div> */}
           </div>
+          {/* <Space /> */}
+        </section>
 
-          <div className="btn_content">
-            <button>Voir Plus</button>
+        <section className="section">
+          <h1>Formations</h1>
+          <div className="formations">
+            <TrainingCard />
+            <TrainingCard />
+            <TrainingCard />
+            <TrainingCard />
+            <TrainingCard />
+            <div className="btn_content">
+              <button>Voir Plus</button>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

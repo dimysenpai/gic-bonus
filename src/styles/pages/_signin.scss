@@ -1,0 +1,65 @@
+.signIn {
+  @extend %container;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  .signIn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    background-color: var(--primary-surface);
+    width: 100%;
+    height: 85%;
+    border: 1px solid var(--primary-border);
+    border-radius: 5px;
+    overflow: hidden;
+
+    .welcome {
+      background-color: var(--primary);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .signIn-form {
+      color: var(--info);
+      .field {
+        & > input {
+          @extend %input;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signIn {
+    .signIn-container {
+      grid-template-columns: 1fr;
+      .welcome {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .signIn {
+    padding: 0;
+    .signIn-container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      .welcome {
+        display: none;
+      }
+    }
+  }
+}

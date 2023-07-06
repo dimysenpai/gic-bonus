@@ -1,44 +1,55 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
-  const [colorSvg, setColorSvg] = useState("#fff");
-
   return (
-    <header className="topbar">
-      <div className="top">
-        <div className="logotext">Gic Bonus</div>
-        <div className="search-container">
-          <input type="search" value="#" />
+    <header className="header">
+      <div className="topbar-up">
+        <a className="title-site" href="#">
+          <h1>Gic Bonus</h1>
+        </a>
+        <div className="search">
+          <input type="search" placeholder="Rechercher..." />
+          <button type="submit">
+            <i className="fas fa-search"></i>
+          </button>
         </div>
-        <div className="actions">
-          <div className="notification">
-            <i className="fa fa-bell"></i>
-            <div>2</div>
+        <div className="content-option">
+          <div className="icon-notif">
+            <div className="notif">
+              <i className="fa fa-bell"></i>
+              <span>2</span>
+            </div>
+            <div className="paner">
+              <i className="fa fa-shopping-bag"></i>
+              <span>2</span>
+            </div>
           </div>
-          <div className="panier">
-            <i className="fa fa-shopping-bag"></i>
-            <div>2</div>
+
+          <div className="menu">
+            <div className="profils">
+              <img src="./images/senpai.png" alt="" />
+            </div>
           </div>
-          {/* <div className="profil-container">
-            <img className="icon-profil" src="./senpai.png" alt="#" />
-            <i className="fa fa-chevron-down"></i>
-            <div className="profil-menu">azerrt</div>
-          </div> */}
         </div>
       </div>
-      <div className="bottom">
-        <div className="links">
-          <a href="/">Acceuil</a>
-          <a href="/store">Boutique</a>
-          <a href="/">Services</a>
-          <a href="/">Formations</a>
-          <a href="/">A Propos</a>
+      <nav className="topbar-down">
+        <div className="down-left">
+          <Link to={"/"}>Accueil</Link>
+          <Link to={"/store"}>Boutique</Link>
+          <Link to={"/service"}>Services</Link>
+          <Link to={"/training"}>Formations</Link>
+          <Link to={"/about"}>A Propos</Link>
         </div>
-        <div className="cta-log">
-          <button className="signin">Inscription</button>
-          <button className="login">Connexion</button>
+        <div className="down-right">
+          <Link to={"/login"}>
+            <button>Login</button>
+          </Link>
+          <Link to={"/signin"}>
+            <button>Signin</button>
+          </Link>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };

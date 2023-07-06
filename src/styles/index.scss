@@ -1,9 +1,24 @@
 @import "./variables";
 @import "./placeholder";
 @import "./settings";
+
 @import "./pages/home";
 @import "./pages/store";
+@import "./pages/service";
+@import "./pages/training";
+@import "./pages/about";
+@import "./pages/detailsproduct";
+@import "./pages/detailsservice";
+@import "./pages/detailstraining";
+
+@import "./components/space";
 @import "./components/topbar";
 @import "./components/herotop";
 @import "./components/breadcrumb";
+@import "./components/card";
+@import "./components/trainingcard";
+
+@import "./pages/login";
+@import "./pages/signin";
+
 @import "./components/footer";

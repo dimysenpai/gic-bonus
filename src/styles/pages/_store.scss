@@ -1,3 +1,10 @@
 .store {
   padding: 7px calc(100vw - 95%);
+
+  .cards_store {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 50px 0px;
+  }
 }

@@ -6,8 +6,26 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
   outline: none;
+  scroll-behavior: smooth;
+  // border: 1px solid red !important;
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 36px;
 }

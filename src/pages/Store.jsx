@@ -1,7 +1,5 @@
 import React from "react";
-import Breadcrumb from "../components/Breadcrumb";
 import Sort from "../components/Sort";
-import Card from "../components/card";
 
 const Store = () => {
   return (

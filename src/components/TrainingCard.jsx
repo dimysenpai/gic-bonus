@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TrainingCard = () => {
+const TrainingCard = (props) => {
   return (
     <div className="formation">
       <div className="img"></div>
       <div className="details">
-        <h2>Infographie</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          similique ipsa, sapiente placeat cum eos!
-        </p>
+        <h2>{props.trainingName}</h2>
+        <p>{props.trainingDescription}</p>
         <Link to={"/detailsTraining"}>
           <button>details</button>
         </Link>

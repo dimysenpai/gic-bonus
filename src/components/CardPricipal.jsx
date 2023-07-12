@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CardPricipal = () => {
+const CardPricipal = (props) => {
   return (
     <div className="product-card">
-      <Link to={"/detailsService"}>
-        <img src="./images/belt.png" alt="Product Image" />
+      <Link to={props.url}>
+        <img src={props.urlName} alt="Product Image" />
       </Link>
       <div className="product-info">
-        <h2 className="product-name">Nom du produit</h2>
-        <p className="product-price">99,99 €</p>
-        <button className="product-button">Ajouter au panier</button>
+        <h2 className="product-name">{props.imgName}</h2>
+        <p className="product-price">{props.price}</p>
+        <button className="product-button">{props.cta}</button>
       </div>
     </div>
   );

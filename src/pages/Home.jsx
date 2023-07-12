@@ -28,7 +28,7 @@ const Home = () => {
           <div className="services">
             <div className="service">
               <div className="ico">
-                <i className="fa fa-user"></i>
+                <i className="fa fa-pen"></i>
               </div>
               <h1>Infographie</h1>
               <p>

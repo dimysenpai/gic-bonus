@@ -64,19 +64,25 @@ const HeroTop = () => {
           className="carousel-item active"
           ref={(ref) => (carouselItemsRef.current[0] = ref)}
         >
-          <img src="./images/home-decor-3.jpg" alt="Image 1" />
+          <img
+            src="./images/mailchimp-Hv9CS6KZayQ-unsplash.jpg"
+            alt="Image 1"
+          />
         </div>
         <div
           className="carousel-item"
           ref={(ref) => (carouselItemsRef.current[1] = ref)}
         >
-          <img src="./images/make-your-photos-shine.png" alt="Image 2" />
+          <img src="./images/pexels-pixabay-273238.jpg" alt="Image 2" />
         </div>
         <div
           className="carousel-item"
           ref={(ref) => (carouselItemsRef.current[2] = ref)}
         >
-          <img src="./images/pexels-pixabay-273238.jpg" alt="Image 3" />
+          <img
+            src="./images/flat-lay-workstation-with-copy-space-laptop.jpg"
+            alt="Image 3"
+          />
         </div>
       </div>
     </div>

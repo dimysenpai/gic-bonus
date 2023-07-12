@@ -1,8 +1,8 @@
 import React from "react";
 import HeroTop from "../components/HeroTop";
-import Card from "../components/card";
 import TrainingCard from "../components/TrainingCard";
 import Space from "../components/Space";
+import CardPricipal from "../components/CardPricipal";
 
 const Home = () => {
   return (
@@ -12,12 +12,13 @@ const Home = () => {
         <section className="section">
           <h1>Articles de la boutique</h1>
           <div className="cards">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <CardPricipal />
+            <CardPricipal />
+            <CardPricipal />
+            <CardPricipal />
+            <CardPricipal />
+            <CardPricipal />
+            <CardPricipal />
           </div>
           <Space />
         </section>

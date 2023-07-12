@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "../components/card";
 import Space from "../components/Space";
+import CardPricipal from "../components/CardPricipal";
 
 const DetailsProduct = () => {
   return (
@@ -25,13 +25,15 @@ const DetailsProduct = () => {
       <section className="sujection">
         <h1>Similaires</h1>
         <div>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
+          <CardPricipal />
         </div>
         <Space />
       </section>

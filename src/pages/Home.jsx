@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroTop from "../components/HeroTop";
 import TrainingCard from "../components/TrainingCard";
 import Space from "../components/Space";
 import CardPricipal from "../components/CardPricipal";
+import { Link } from "react-router-dom";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Home = () => {
   const jsonCardInfos = [
@@ -118,39 +128,66 @@ const Home = () => {
       <div className="home">
         <section className="section">
           <h1>Articles de la boutique</h1>
-          <div className="cards">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+          >
             {jsonCardInfos.map((jsonCardInfo, key) => {
               return (
-                <CardPricipal
-                  key={key}
-                  url={"/detailsService"}
-                  urlName={`./images/${jsonCardInfo.url}`}
-                  imgName={jsonCardInfo.name}
-                  price={jsonCardInfo.price}
-                  cta={"Ajouter au panier"}
-                />
+                <SwiperSlide id={key}>
+                  <CardPricipal
+                    url={"/detailsService"}
+                    urlName={`./images/${jsonCardInfo.url}`}
+                    imgName={jsonCardInfo.name}
+                    price={jsonCardInfo.price}
+                    cta={"Ajouter au panier"}
+                  />
+                </SwiperSlide>
               );
             })}
-          </div>
+          </Swiper>
+
           <Space />
         </section>
 
         <section className="section section-blue">
           <h1>Listes des Services</h1>
-          <div className="services">
+          <Swiper
+            slidesPerView={3}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
             {jsonServices.map((jsonService, key) => {
               return (
-                <div id={key} className="service">
-                  <div className="ico">
-                    <i className={`fas ${jsonService.faIcon}`}></i>
-                  </div>
-                  <h1>{jsonService.serviceName}</h1>
-                  <p>{jsonService.serviceDescription}</p>
-                </div>
+                <SwiperSlide id={key} className="services">
+                  <Link to="/services/1" id={key} className="service">
+                    <div className="icon">
+                      <i className={`fas ${jsonService.faIcon}`}></i>
+                    </div>
+                    <h1>{jsonService.serviceName}</h1>
+                    <p>{jsonService.serviceDescription}</p>
+                  </Link>
+                </SwiperSlide>
               );
             })}
-          </div>
-          {/* <Space /> */}
+          </Swiper>
         </section>
 
         <section className="section">

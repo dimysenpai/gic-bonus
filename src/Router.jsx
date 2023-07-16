@@ -11,12 +11,15 @@ import Training from "./pages/Training";
 import DetailsProduct from "./pages/DetailsProduct";
 import DetailsService from "./pages/DetailsService";
 import DetailsTraining from "./pages/DetailsTraining";
+import _text from "./pages/_text";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signin" element={<SignIn />} />
+
+      <Route path="/test" element={<_text />} />
 
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />

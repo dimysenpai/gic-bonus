@@ -47,9 +47,7 @@ const Login = () => {
       <div className="modal-alert"></div>
       <div className="login-container">
         <div className="welcome">
-          <img src="./images/gic-bonus.png" alt="" />
-          <h2>Gic Bonus</h2>
-          <p>Bienvenue dans l'aventure gic bonus</p>
+          <img src="./images/gic-bonus.png" alt="" style={{ width: 300 }} />
         </div>
         <form onSubmit={handleLogin} id="login-form" className="login-form">
           <h1>Connectez-Vous</h1>

@@ -54,9 +54,9 @@ const HeroTop = () => {
     <div className="hero-top" ref={heroTopRef}>
       <div className="container">
         <h1>Gic Bonus</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <p>Nous sommes toujours là pour vous ! Le design à proximité !</p>
         <a href="#" className="btn btn-primary">
-          Call to action
+          S'inscrire
         </a>
       </div>
       <div className="carousel" ref={carouselRef}>

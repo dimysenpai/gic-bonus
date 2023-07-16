@@ -35,6 +35,10 @@
           @extend %input;
         }
       }
+
+      button {
+        @extend %btn;
+      }
     }
   }
 }

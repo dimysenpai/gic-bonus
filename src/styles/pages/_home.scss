@@ -18,43 +18,53 @@
     .services {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      align-items: start;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      gap: 30px;
 
       .service {
-        width: 80%;
-        height: fit-content;
-        position: relative;
-        background-color: var(--primary-surface);
-        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 15px 25px;
-        border-radius: 5px;
-        margin-bottom: 30px;
-        border: 1px solid var(--primary-border);
-        text-align: center;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        background-color: var(--neutral-light-20);
+        box-shadow: 0 0.125rem 0.25rem var(--primary-focus);
+        transition: transform 0.3s ease-in-out;
+        max-width: 300px;
 
-        .ico {
-          background: var(--neutral-dark-60);
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          font-size: 24px;
-          display: grid;
-          align-items: center;
+        &:hover {
+          transform: translateY(-0.25rem);
+        }
+
+        .icon {
+          display: flex;
           justify-content: center;
-          color: var(--info-surface);
-          margin-right: 0px;
+          align-items: center;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          background-color: var(--info);
+          color: var(--neutral-light-10);
+          font-size: 20px;
         }
 
-        & > h1 {
-          color: var(--info-hover);
+        h1 {
+          font-size: 23px;
+          text-align: center;
+          line-height: 30px;
+          color: var(--info);
+          padding: 10px;
         }
 
-        & > p {
-          color: var(--neutral-dark-90);
-          font-weight: bold;
+        p {
+          margin-bottom: 0.5rem;
+          text-align: center;
+          font-size: 15px;
+          color: var(--neutral-dark-80);
         }
       }
     }
